@@ -1,0 +1,7 @@
+<form name="clickCounter">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Count click: {{countClick}}</label>
+        <input name="inputCountClick" type="number" class="form-control" id="exampleInputEmail1" placeholder="Enter number click" ng-model="countClick">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="changeValueInput()" ng-disabled="!clickCounter.$valid">Submit</button>
+</form>

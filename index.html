@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="AngularArticle">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>AngularJS Study</title>
+
+    <!--Include bootstrap library-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!--Include angularJS-->
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+
+    <!--Include angularJS route-->
+    <script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+
+    <!--Include app module-->
+    <script type="text/javascript" src="app/app.js"></script>
+
+    <!--Include services-->
+    <script type="text/javascript" src="app/Services/DataService.js"></script>
+
+    <!--Include filters-->
+    <script type="text/javascript" src="app/Filters/filterPagination.js"></script>
+
+    <!--Include routing provider-->
+    <script type="text/javascript" src="app/Providers/RouteProvider.js"></script>
+
+    <!--Including directives-->
+    <script type="text/javascript" src="app/Directives/ModalDirective/ModalController.js"></script>
+
+    <!--Include controllers-->
+    <script type="text/javascript" src="app/Controllers/ContentPageController.js"></script>
+    <script type="text/javascript" src="app/Controllers/FormPageController.js"></script>
+    <script type="text/javascript" src="app/Controllers/ListPageController.js"></script>
+</head>
+<body>
+    <!--Header. Static block-->
+    <header id="header" class="page-header">
+        <h1>Angular example <small>BY IGOR VOROBYOV & ANTON FEDENKO</small></h1>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <a href="#/content-page" type="button" class="btn btn-default">Content page</a>
+            <a href="#/form-page" type="button" class="btn btn-default">Form page</a>
+            <a href="#/list-page" type="button" class="btn btn-default">List page</a>
+        </div>
+    </header>
+    <!--Main block where content will appear next-->
+    <div id="main">
+        <div ng-view></div>
+    </div>
+    <!--Footer. Static block.-->
+    <footer id="footer">
+        <blockquote>
+            <span>Angular example by <strong>IGOR VOROBYOV</strong> & <strong>ANTON FEDENKO</strong>. Study project 2015. &copy;</span>
+        </blockquote>
+    </footer>
+</body>
+</html>

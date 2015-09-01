@@ -1,0 +1,27 @@
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Filter</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="search">
+    </div>
+</form>
+<table class="table table-striped table-bordered">
+    <thead class="table-header">
+        <tr>
+            <th><span ng-click="orderBy('name')">Name<span class="icon {{iconClass}}" ng-show="predicate === 'name'"></span></span></th>
+            <th><span ng-click="orderBy('age')">Age<span class="icon {{iconClass}}" ng-show="predicate === 'age'"></span></span></th>
+            <th><span ng-click="orderBy('gender')">Gender<span class="icon {{iconClass}}" ng-show="predicate === 'gender'"></span></span></th>
+            <th><span ng-click="orderBy('company')">Company<span class="icon {{iconClass}}" ng-show="predicate === 'company'"></span></span></th>
+            <th><span ng-click="orderBy('address')">Address<span class="icon {{iconClass}}" ng-show="predicate === 'address'"></span></span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in myData | filter : search | orderBy : predicate : reverse" ng-click="openModal(data)">
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.company}}</td>
+            <td>{{data.address}}</td>
+        </tr>
+    </tbody>
+</table>
+<easy-modal class="modal-person" name-button="Close" modal-data="modalData.data" close-modal="closeModal()" is-close="modalData.isClose"></easy-modal>

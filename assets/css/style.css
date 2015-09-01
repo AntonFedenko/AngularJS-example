@@ -1,0 +1,56 @@
+body{
+    padding: 0 25px;
+}
+
+.btn-group > .btn{
+    outline: none;
+}
+
+#main{
+    padding: 20px 0;
+}
+
+.table{
+    table-layout: fixed;
+}
+.table tr{
+    cursor: pointer;
+}
+.table-header span{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+.table-header .icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.table-header .icon.ascending{
+    border-top: none;
+    border-bottom: 5px solid #000;
+}
+.table-header .icon.descending{
+    border-bottom: none;
+    border-top: 5px solid #000;
+}
+
+.modal-person{
+    left: auto;
+    right: 25px;
+}
+
+.page-header{
+    margin: 20px 0 0;
+}
